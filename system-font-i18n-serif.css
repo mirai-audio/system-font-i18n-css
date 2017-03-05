@@ -1,0 +1,77 @@
+/*!
+@author @0xadada
+@url https://0xadada.pub
+@license MIT
+*/
+
+
+/* system-serif
+
+A serif style has small adornments attached to the ends of the letterform.
+============================================================================= */
+
+/* system-serif
+
+style:         serif
+variant:       normal (Regular)
+weight:        400 (Regular)
+unicode range: english (latin-1) and more
+ */
+@font-face {
+  font-family: system-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local(Georgia), local("Times New Roman"), /* macOS, Windows, iOS */
+    local(Times), /* fallback, macOS, Windows, iOS */
+    local("DejaVu Serif"), local("Cambria"), local("Gentium"), /* Linux */
+    local("Noto Serif"); /* Android */
+  unicode-range: U+0020-00FF, /* Basic-latin - Latin-1 Supplement */
+    U+2000-206F, /* General Punctuation */
+    U+2070-209F, /* Superscripts & subscripts */
+    U+2150-218F, /* Number forms */
+    U+2190-21FF, /* Arrows */
+    U+2200-22FF; /* Mathmatical operators */
+}
+
+
+/* system-mincho
+
+A mincho style is what a script or cursive style typeface looks like in
+Japanese letterforms.
+============================================================================= */
+
+/* system-mincho
+
+style:         mincho (Serif)
+variant:       normal (Regular)
+weight:        400 (Regular)
+unicode range: CJK Symbols and Punctuation, Hiragana, Katakana, CJK Unified
+               ideographs.
+ */
+@font-face {
+  font-family: system-mincho;
+  font-style: normal;
+  font-weight: 400;
+  src: local("HiraMinProN-W4"), local("Hiragino Mincho ProN W4"), /* macOS, iOS */
+    local("MS-PMincho"), local("MSPMincho"), /* Windows */
+    local("Noto Serif"); /* Android */
+  unicode-range: U+3000-303F, /* CJK Symbols and Punctuation */
+    U+3040-309F, /* Hiragana */
+    U+30A0-30FF, /* Katakana */
+    U+4E00-9FFF; /* CJK Unified ideographs */;
+}
+
+
+/* utility helpers
+
+These utility rules allow developers to opt-in to a specific typeface
+using css classes.
+============================================================================= */
+
+/* serif / mincho */
+.system-font-i18n-serif {
+  font-family: system-serif,  /* English (latin-1 +) */
+    system-mincho,  /* Japanese */
+    serif,  /* fallback */
+    "Twitter Color Emoji", "Apple Color Emoji", "Segoe UI Emoji"; /* emoji */
+}
