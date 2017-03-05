@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="system-font-i18n.css">
+  <link rel="canonical" href="https://mirai-audio.github.io/system-font-i18n-css">
+  <link rel="author" href="http://github.com/mirai-audio/mir/wiki/humans.txt" type="text/plain">
+  <style>
+    body {
+      margin: 0 auto;
+      max-width: 48em;
+    }
+    /* weights */
+    .t-Light { font-weight: 300; }
+    .t-Regular { font-weight: 400; }
+    .t-Bold { font-weight: 700; }
+
+    /* variants */
+    .t-Italic { font-style: italic; }
+    .t-Regular { font-style: normal; }
+
+    /* sizes */
+    .t-XXS { font-size: 0.75em; /* 12 */}
+    .t-XS  { font-size: 0.875em; /* 14 */}
+    .t-SM  { font-size: 0.875em; /* 14 */}
+    .t-MD  { font-size: 1em; /* 16 */}
+    .t-LG  { font-size: 1.125em; /* 18 */}
+    .t-XL  { font-size: 1.5em; /* 24 */}
+    .t-XXL { font-size: 2em; /* 32 */ }
+    .t-Hero { font-size: 6em; /* 96 */ }
+
+    /* alignment */
+    .t-Center   { text-align: center; }
+    .t-Justify  { text-align: justify; }
+    .t-Left     { text-align: left; }
+    .t-Right    { text-align: right; }
+    .t-Vertical { writing-mode: vertical-rl; }
+
+    /* Special */
+    .t-FL::first-letter {
+      display: inline-block;
+      float: left;
+      font-size: 6rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body class="system-font-i18n-sans">
+
+<h1>system-font-i18n.css</h1>
+
+<nav role="navigation">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#support">Support</a></li>
+    <li><a href="#type__variations">Variations</a></li>
+    <li><a href="#type__sample">Sample</a></li>
+    <li><a href="#type__vertical">Vertical</a></li>
+    <li><a href="#type__charset">Character Set</a></li>
+    <li><a href="#type__sizes">Scale</a></li>
+    <li><a href="#type__light">Sans-serif (Gothic) / Light</a></li>
+    <li><a href="#type__sansserif">Sans-serif (Gothic) / Regular</a></li>
+    <li><a href="#type__bold">Sans-serif (Gothic) / Bold</a></li>
+    <li><a href="#type__italic">Sans-serif (Gothic) / Italic</a></li>
+    <li><a href="#type__bolditalic">Sans-serif (Gothic) / Bold Italic</a></li>
+  </ul>
+</nav>
+
+<h2 id="about">About</h2>
+<p><em>A modern native system font stack for consistent multi-lingual
+  typesetting, optimized by unicode ranges.</em>
+</p>
+<p><code>system-font-i18n</code> provides twelve variations for the Sans-serif
+  family of system font. This font stack provides more consistent character
+  typesetting across multiple languages and all modern operating
+  systems.
+</p>
+<p>
+  <code>system-font-i18n</code> is optimized to select the best system font
+  on a per-character basis, based on the unicode range of that character.
+</p>
+<p>
+  <code>system-font-i18n</code> provides one font family,
+  <code>sans-serif</code>. The font family has
+  three weights, <em>light (300)</em>, <em>regular (400)</em>, and
+  <em>bold (700)</em>. Each weight has two styles&ndash; <em>regular</em>,
+  and <em>italic</em>
+</p>
+<p>Modern operating systems such as macOS (Mavericks+), iOS, Android (2.4+),
+  Windows 7+, and Ubuntu ship with a quality set of system fonts. Currently, css
+  doesn't make it easy to select a high-quality system typeface that displays
+  a consistent font-family in all languages.
+</p>
+<p style="font-family:serif">This problem is illustrated in this paragraph.
+  The text in this paragraph is set with <code>font-family: serif;</code>. macOS
+  Sierra on Firefox will select "Times Roman" for the English (latin-1 unicode) characters.
+  Within the same paragraph, Japanese characters (あア安) will by
+  typeset in "Hiragino Kaku Gothic ProN W3". In this instance, the English
+  characters are typeset in a serif font, while the Japanese characters are
+  set in a sans-serif/gothic font.
+</p>
+<p>Other projects have solutions to select local system typefaces, such as
+  <a href="https://github.com/jonathantneal/system-font-css">system-font-css</a>,
+  but they do not solve the problem of inconsistent font-family typesetting
+  in internationalized or multi-language documents.
+</p>
+<p>[<a href="#top">Top</a>]</p>
+
+<h2 id="usage">Usage</h2>
+<h3>General Usage</h3>
+<p>
+  The robust and preferred method is to reference the
+  <code>system-font-i18n.css</code> stylesheet in the
+  <code>&lt;head&gt;</code> of the <code>&lt;html&gt;</code> document.  Then add
+  the utility helper class to the <code>&lt;body&gt;</code> <code>class</code>.
+  <code><pre>&lt;link rel="stylesheet" href="system-font-i18n.css"&gt;
+&hellip;
+&lt;body class="system-font-i18n-sans"&gt;
+  </pre></code>
+</p>
+<p>Another method is to add the <code>system-font-i18n-sans</code> font
+  stack properties directly to the <code>html, body</code> rules in an existing
+  stylesheet:
+  <code><pre>html,
+body {
+  font-family: system-sans-serif,
+    system-gothic,
+    sans-serif,
+    "Twitter Color Emoji", "Apple Color Emoji", "Segoe UI Emoji";
+}</pre></code>
+</p>
+<p><code>system-font-i18n.css</code> is designed to play well with other css
+  frameworks, notably
+  <a href="https://github.com/necolas/normalize.css">normalize.css</a>,
+  and <a href="https://github.com/jonathantneal/sanitize.css">sanitize.css</a>.
+  <code>system-font-i18n.css</code> introduces only one global CSS rule,
+  <code>.system-font-i18n-sans</code> and two <code>@font-face</code> names:
+  <code>system-sans-serif, system-gothic</code>.
+</p>
+<p>The <a href="https://lists.w3.org/Archives/Public/www-style/2015Jul/0169.html">
+  W3C is currently discussing standarizing a generic "system" font family</a>.
+  As such, <code>system-font-i18n.css</code> has avoided naming our
+  <code>@font-face</code> "system" to prevent future collisions with the
+  standard.
+</p>
+<p>[<a href="#top">Top</a>]</p>
+
+<h2 id="support">Support</h2>
+<p>Modern macOS systems since El Capitan will select "San Francisco". Yosemite
+  systems will select "Helvetica Neue". Mavericks back to Kodiak will select
+  "Lucida Grande".
+</p>
+<p>Windows and Windows Phone will select "Segoe UI". XP selects "Arial", not
+  Tahoma (does not have an italic variation).
+</p>
+<p>Android will select "Roboto".</p>
+<p>Ubuntu will use the apty named Ubuntu, and other linux variants will select
+  "Oxygen-Sans" or "Cantarell"
+</p>
+<p>This project has optimized unicode typesetting for English <sup>(unicode ranges
+  basic-latin, latin-1 supplement, general punctuation, superscripts &amp;
+  subscripts, number forms, arrows, and mathmatical operators)</sup>, and Japanese
+  <sup>(CJK symbols and punctuation, Hiragana, Katakana, CJK unified ideographs)</sup>.
+  The project is accepting help in supporting other languages.
+</p>
+<p>[<a href="#top">Top</a>]</p>
+
+<hr>
+
+<main role="main">
+  <section id="type__sans" class="system-font-i18n-sans">
+    <header><h1>sans-serif / gothic</h1></header>
+    <article id="type__variations">
+      <header>
+        <h1>Variations</h1>
+      </header>
+      <section>
+        <table style="text-align:center; width:100%">
+          <colgroup>
+            <col span="2">
+            <col span="2" style="background-color:#dddddd">
+            <col span="2" style="background-color:#eeeeee">
+          </colgroup>
+          <thead class="system-font-i18n-sans">
+            <tr>
+              <th colspan="2"></th>
+              <th colspan="2">English (latin-1)</th>
+              <th colspan="2">Japanese</th>
+            </tr>
+            <tr>
+              <th colspan="2"></th>
+              <th class="t-Regular">regular (normal)</th>
+              <th class="t-Italic">italic</th>
+              <th class="t-Regular">regular (normal)</th>
+              <th class="t-Italic">italic</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="system-font-i18n-sans t-Light">
+              <th class="t-Vertical" rowspan="3">sans-serif</th>
+              <th>light (300)</th>
+              <td>Aa</td>
+              <td class="t-Italic">Aa</td>
+              <td>あア安</td>
+              <td class="t-Italic">あア安</td>
+            </tr>
+            <tr class="system-font-i18n-sans t-Regular">
+              <th>regular (400)</th>
+              <td>Aa</td>
+              <td class="t-Italic">Aa</td>
+              <td>あア安</td>
+              <td class="t-Italic">あア安</td>
+            </tr>
+            <tr class="system-font-i18n-sans t-Bold">
+              <th>bold (700)</th>
+              <td>Aa</td>
+              <td class="t-Italic">Aa</td>
+              <td>あア安</td>
+              <td class="t-Italic">あア安</td>
+            </tr>
+            <tr hidden class="system-font-i18n-serif t-Light">
+              <th class="t-Vertical" rowspan="3">serif</th>
+              <th>light (300)</th>
+              <td>Aa</td>
+              <td class="t-Italic">Aa</td>
+              <td>あア安</td>
+              <td class="t-Italic">あア安</td>
+            </tr>
+            <tr hidden class="system-font-i18n-serif t-Regular">
+              <th>regular (400)</th>
+              <td>Aa</td>
+              <td class="t-Italic">Aa</td>
+              <td>あア安</td>
+              <td class="t-Italic">あア安</td>
+            </tr>
+            <tr hidden class="system-font-i18n-serif t-Bold">
+              <th>bold (700)</th>
+              <td>Aa</td>
+              <td class="t-Italic">Aa</td>
+              <td>あア安</td>
+              <td class="t-Italic">あア安</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table style="width:100%">
+          <thead>
+            <tr>
+              <th>Font/Size</th>
+              <th>Regular</th>
+              <th>Light</th>
+              <th>Bold</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="t-SansSerif">
+              <th>Sans/Hero</th>
+              <td>Aa あア安</td>
+              <td class="t-Light t-Hero">Aa あア安</td>
+              <td class="t-Bold t-Hero">Aa あア安</td>
+            </tr>
+            <tr class="t-SansSerif">
+              <th>Sans/XXL</th>
+              <td>Aa あア安</td>
+              <td class="t-Light t-XXL">Aa あア安</td>
+              <td class="t-Bold t-XXL">Aa あア安</td>
+            </tr>
+            <tr class="t-SansSerif">
+              <th>Sans/XL</th>
+              <td>Aa あア安</td>
+              <td class="t-Light t-XL">Aa あア安</td>
+              <td class="t-Bold t-XL">Aa あア安</td>
+            </tr>
+            <tr class="t-SansSerif">
+              <th>Sans/LG</th>
+              <td>Aa あア安</td>
+              <td class="t-Light t-LG">Aa あア安</td>
+              <td class="t-Bold t-LG">Aa あア安</td>
+            </tr>
+            <tr class="t-SansSerif">
+              <th>Sans/MD</th>
+              <td>Aa あア安</td>
+              <td class="t-Light">Aa あア安</td>
+              <td class="t-Bold">Aa あア安</td>
+            </tr>
+            <tr class="t-SansSerif">
+              <th>Sans/SM</th>
+              <td>Aa あア安</td>
+              <td class="t-Light t-SM">Aa あア安</td>
+              <td class="t-Bold t-SM">Aa あア安</td>
+            </tr>
+            <tr class="t-SansSerif">
+              <th>Sans/XS</th>
+              <td>Aa あア安</td>
+              <td class="t-Light t-SM">Aa あア安</td>
+              <td class="t-Bold t-Sm">Aa あア安</td>
+            </tr>
+            <tr class="t-SansSerif">
+              <th>Sans/XXS</th>
+              <td>Aa あア安</td>
+              <td class="t-Light t-XXS">Aa あア安</td>
+              <td class="t-Bold t-XXS">Aa あア安</td>
+            </tr>
+            <tr class="t-Serif">
+              <th>Serif/MD</th>
+              <td>Aaあア安</td>
+              <td class="t-Light">Aaあア安</td>
+              <td class="t-Bold">Aaあア安</td>
+            </tr>
+          </tbody>
+        </table>
+        <footer><p>[<a href="#top">Top</a>]</p></footer>
+
+        <table style="width:100%">
+          <thead>
+            <tr>
+              <th>Font/Size</th>
+              <th>Italic</th>
+              <th>Light Italic</th>
+              <th>Bold Italic</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="t-SansSerif">
+              <th>Sans/XXS</th>
+              <td class="t-Italic t-XXS">Aa あア安</td>
+              <td class="t-Light t-Italic t-XXS">Aa あア安</td>
+              <td class="t-Bold t-Italic t-XXS">Aa あア安</td>
+            </tr>
+            <tr class="t-SansSerif">
+              <th>Sans/XS</th>
+              <td class="t-Italic t-XS">Aa あア安</td>
+              <td class="t-Light t-Italic t-XS">Aa あア安</td>
+              <td class="t-Bold t-Italic t-XS">Aa あア安</td>
+            </tr>
+            <tr class="t-SansSerif">
+              <th>Sans/SM</th>
+              <td class="t-Italic t-SM">Aa あア安</td>
+              <td class="t-Light t-Italic t-SM">Aa あア安</td>
+              <td class="t-Bold t-Italic t-SM">Aa あア安</td>
+            </tr>
+            <tr class="t-SansSerif">
+              <th>Sans/MD</th>
+              <td class="t-Italic t-MD">Aa あア安</td>
+              <td class="t-Light t-Italic t-MD">Aa あア安</td>
+              <td class="t-Bold t-Italic t-MD">Aa あア安</td>
+            </tr>
+            <tr class="t-SansSerif">
+              <th>Sans/LG</th>
+              <td class="t-Italic t-LG">Aa あア安</td>
+              <td class="t-Light t-Italic t-LG">Aa あア安</td>
+              <td class="t-Bold t-Italic t-LG">Aa あア安</td>
+            </tr>
+            <tr class="t-SansSerif">
+              <th>Sans/XL</th>
+              <td class="t-Italic t-XL">Aa あア安</td>
+              <td class="t-Light t-Italic t-XL">Aa あア安</td>
+              <td class="t-Bold t-Italic t-XL">Aa あア安</td>
+            </tr>
+            <tr class="t-SansSerif">
+              <th>Sans/XXL</th>
+              <td class="t-Italic t-XXL">Aa あア安</td>
+              <td class="t-Light t-Italic t-XXL">Aa あア安</td>
+              <td class="t-Bold t-Italic t-XXL">Aa あア安</td>
+            </tr>
+            <tr class="t-SansSerif">
+              <th>Sans/Hero</th>
+              <td class="t-Italic t-Hero">Aa あア安</td>
+              <td class="t-Light t-Italic t-Hero">Aa あア安</td>
+              <td class="t-Bold t-Italic t-Hero">Aa あア安</td>
+            </tr>
+            <tr class="t-Serif">
+              <th>Serif</th>
+              <td class="t-Italic">Aa あア安</td>
+              <td class="t-Light t-Italic">Aa あア安</td>
+              <td class="t-Bold t-Italic">Aa あア安</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <footer><p>[<a href="#top">Top</a>]</p></footer>
+    </article>
+
+    <article id="type__sample">
+      <header>
+        <h1>Sample</h1>
+      </header>
+      <section>
+        <p>
+          <strong>Default</strong>
+          Lorem ipsum dolor sit amet, consectetur adipiscing 複素数体であれば、任意のCM-タイプの A は、実際。
+        </p>
+        <p class="t-SansSerif t-Light">
+          <strong>Sans-serif (Gothic) / Light</strong>
+          Lorem ipsum dolor sit amet, consectetur adipiscing 複素数体であれば、任意のCM-タイプの A は、実際。
+        </p>
+        <p class="t-SansSerif">
+          <strong>Sans-serif (Gothic) / Regular</strong>
+          Lorem ipsum dolor sit amet, consectetur adipiscing 複素数体であれば、任意のCM-タイプの A は、実際。
+        </p>
+        <p class="t-SansSerif t-Italic">
+          <strong>Sans-serif (Gothic) / Italic</strong>
+          Lorem ipsum dolor sit amet, consectetur adipiscing 複素数体であれば、任意のCM-タイプの A は、実際。
+        </p>
+        <p class="t-SansSerif t-Bold">
+          <strong>Sans-serif (Gothic) / Bold</strong>
+          Lorem ipsum dolor sit amet, consectetur adipiscing 複素数体であれば、任意のCM-タイプの A は、実際。
+        </p>
+        <p class="t-SansSerif t-Bold t-Italic">
+          <strong>Sans-serif (Gothic) / Bold Italic</strong>
+          Lorem ipsum dolor sit amet, consectetur adipiscing 複素数体であれば、任意のCM-タイプの A は、実際。
+        </p>
+      </section>
+      <footer><p>[<a href="#top">Top</a>]</p></footer>
+    </article>
+
+    <article id="type__vertical">
+      <header><h1>Vertical</h1></header>
+      <section>
+        <div style="max-height: 36em;" class="t-Vertical">
+          <h1 class="t-Hero">攻殻機動隊</h1>
+          <p class="t-FL">時は21世紀、第3次核大戦とアジアが勝利した第4次非核大戦を経て、世界は「地球統一ブロック」となり、科学技術が飛躍的に高度化した日本が舞台。その中でマイクロマシン(Micromachine)技術（作中ではマイクロマシニングと表記されている）を使用して脳の神経ネットに素子（デバイス）を直接接続する電脳化技術や、義手・義足にロボット技術を付加した発展系であるサイボーグ（義体化）技術が発展、普及した。結果、多くの人間が電脳によってインターネットに直接アクセスできる時代が到来した。生身の人間、電脳化した人間、サイボーグ、アンドロイド、バイオロイドが混在する社会の中で、テロや暗殺、汚職などの犯罪を事前に察知してその被害を最小限に防ぐ内務省直属の攻性公安警察組織「公安9課」（通称「攻殻機動隊」）の活動を描いた物語。作中の年表は別項、攻殻機動隊シリーズの年表を参照。</p>
+          <p>時は21世紀、第3次核大戦とアジアが勝利した第4次非核大戦を経て、世界は「地球統一ブロック」となり、科学技術が飛躍的に高度化した日本が舞台。その中でマイクロマシン(Micromachine)技術（作中ではマイクロマシニングと表記されている）を使用して脳の神経ネットに素子（デバイス）を直接接続する電脳化技術や、義手・義足にロボット技術を付加した発展系であるサイボーグ（義体化）技術が発展、普及した。結果、多くの人間が電脳によってインターネットに直接アクセスできる時代が到来した。生身の人間、電脳化した人間、サイボーグ、アンドロイド、バイオロイドが混在する社会の中で、テロや暗殺、汚職などの犯罪を事前に察知してその被害を最小限に防ぐ内務省直属の攻性公安警察組織「公安9課」（通称「攻殻機動隊」）の活動を描いた物語。作中の年表は別項、攻殻機動隊シリーズの年表を参照。</p>
+        </div>
+      </section>
+      <footer><p>[<a href="#top">Top</a>]</p></footer>
+    </article>
+
+    <article id="type__charset">
+      <header>
+        <h1>Character Set</h1>
+      </header>
+      <section>
+        <p><strong>Latin-1 Basic:</strong>
+          ! " # $ % &amp; ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ?@A B C D E F G H I J K L M N OP Q R S T U V W X Y Z [ \ ] ^ _`a b c d e f g h i j k l m n op q r s t u v w x y z { | } ~
+        </p>
+        <p><strong>Hiragana:</strong>
+          ぁ あ ぃ い ぅ う ぇ え ぉ お か が き ぎ く ぐ け げ こ ご さ ざ し じ す ず せ ぜ そ ぞ た だ ち ぢ っ つ づ て で と ど な に ぬ ね の は ば ぱ ひ び ぴ ふ ぶ ぷ へ べ ぺ ほ ぼ ぽ ま み む め も ゃ や ゅ ゆ ょ よ ら り る れ ろ ゎ わ ゐ ゑ を ん ゔ ゕ ゖ  ゙ ゚ ゛ ゜ ゝ ゞ ゟ
+        </p>
+        <p><strong>Katakana:</strong>
+          ゠ ァ ア ィ イ ゥ ウ ェ エ ォ オ カ ガ キ ギ ク グ ケ ゲ コ ゴ サ ザ シ ジ ス ズ セ ゼ ソ ゾ タ ダ チ ヂ ッ ツ ヅ テ デ ト ド ナ ニ ヌ ネ ノ ハ バ パ ヒ ビ ピ フ ブ プ ヘ ベ ペ ホ ボ ポ マ ミ ム メ モ ャ ヤ ュ ユ ョ ヨ ラ リ ル レ ロ ヮ ワ ヰ ヱ ヲ ン ヴ ヵ ヶ ヷ ヸ ヹ ヺ ・ ー ヽ ヾ ヿ
+        </p>
+      </section>
+      <footer><p>[<a href="#top">Top</a>]</p></footer>
+    </article>
+
+    <article id="type__sizes">
+      <header><h1>Scale</h1></header>
+      <section class="t-SansSerif">
+        <p class="t-XXS">
+          <strong>XXS:</strong>
+          Lorem ipsum dolor sit amet, consectetur adipiscing 複素数体であれば、任意のCM-タイプの A は、実際。
+        </p>
+        <p class="t-XS">
+          <strong>XS:</strong>
+          Lorem ipsum dolor sit amet, consectetur adipiscing 複素数体であれば、任意のCM-タイプの A は、実際。
+        </p>
+        <p class="t-SM">
+          <strong>SM:</strong>
+          Lorem ipsum dolor sit amet, consectetur adipiscing 複素数体であれば、任意のCM-タイプの A は、実際。
+        </p>
+        <p class="t-MD">
+          <strong>MD:</strong>
+          Lorem ipsum dolor sit amet, consectetur adipiscing 複素数体であれば、任意のCM-タイプの A は、実際。
+        </p>
+        <p class="t-LG">
+          <strong>LG:</strong>
+          Lorem ipsum dolor sit amet, consectetur adipiscing 複素数体であれば、任意のCM-タイプの A は、実際。
+        </p>
+        <p class="t-XL">
+          <strong>XXL:</strong>
+          Lorem ipsum dolor sit amet, consectetur adipiscing 複素数体であれば、任意のCM-タイプの A は、実際。
+        </p>
+        <p class="t-XXL">
+          <strong>XXL:</strong>
+          Lorem ipsum dolor sit amet, consectetur adipiscing 複素数体であれば、任意のCM-タイプの A は、実際。
+        </p>
+        <p class="t-Hero">
+          <strong>Hero:</strong>
+          Lorem ipsum dolor sit amet, consectetur adipiscing 複素数体であれば、任意のCM-タイプの A は、実際。
+        </p>
+      </section>
+      <footer><p>[<a href="#top">Top</a>]</p></footer>
+    </article>
+
+    <article id="type__light">
+      <header>
+        <h1>Sans-serif (Gothic) / Light</h1>
+      </header>
+      <section class="t-SansSerif t-Light">
+        <p>This is the sans-serif light font.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pulvinar ultricies dictum. Morbi erat nisi, suscipit at viverra eget, rhoncus ac sapien.  Maecenas eleifend nulla quis consectetur sollicitudin. Mauris vitae faucibus magna. Mauris at maximus risus. Praesent consequat elementum elementum. Vestibulum sollicitudin ac dolor congue auctor. Fusce euismod ante nec ipsum efficitur, ac porta justo ultrices. Suspendisse sed iaculis metus, vitae tincidunt est.  Phasellus vulputate eros lacus, id dictum sem mollis in. Praesent massa urna, commodo a facilisis sed, ullamcorper sit amet lacus.
+        </p>
+        <p>時は21世紀、第3次核大戦とアジアが勝利した第4次非核大戦を経て、世界は「地球統一ブロック」となり、科学技術が飛躍的に高度化した日本が舞台。その中でマイクロマシン(Micromachine)技術（作中ではマイクロマシニングと表記されている）を使用して脳の神経ネットに素子（デバイス）を直接接続する電脳化技術や、義手・義足にロボット技術を付加した発展系であるサイボーグ（義体化）技術が発展、普及した。結果、多くの人間が電脳によってインターネットに直接アクセスできる時代が到来した。生身の人間、電脳化した人間、サイボーグ、アンドロイド、バイオロイドが混在する社会の中で、テロや暗殺、汚職などの犯罪を事前に察知してその被害を最小限に防ぐ内務省直属の攻性公安警察組織「公安9課」（通称「攻殻機動隊」）の活動を描いた物語。作中の年表は別項、攻殻機動隊シリーズの年表を参照。</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pulvinar ultricies dictum. Morbi erat nisi, suscipit at viverra eget, rhoncus ac sapien.  Maecenas eleifend nulla quis consectetur sollicitudin. Mauris vitae faucibus magna. Mauris at maximus risus. Praesent consequat elementum elementum. Vestibulum sollicitudin ac dolor congue auctor. Fusce euismod ante nec ipsum efficitur, ac porta justo ultrices. Suspendisse sed iaculis metus, vitae tincidunt est.  Phasellus vulputate eros lacus, id dictum sem mollis in. Praesent massa urna, commodo a facilisis sed, ullamcorper sit amet lacus.</p>
+      </section>
+      <footer><p>[<a href="#top">Top</a>]</p></footer>
+    </article>
+
+    <article id="type__sansserif">
+      <header>
+        <h1>Sans-serif (Gothic) / Regular</h1>
+      </header>
+      <section class="t-SansSerif">
+        <p>This is the sans-serif regular font.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pulvinar ultricies dictum. Morbi erat nisi, suscipit at viverra eget, rhoncus ac sapien.  Maecenas eleifend nulla quis consectetur sollicitudin. Mauris vitae faucibus magna. Mauris at maximus risus. Praesent consequat elementum elementum. Vestibulum sollicitudin ac dolor congue auctor. Fusce euismod ante nec ipsum efficitur, ac porta justo ultrices. Suspendisse sed iaculis metus, vitae tincidunt est.  Phasellus vulputate eros lacus, id dictum sem mollis in. Praesent massa urna, commodo a facilisis sed, ullamcorper sit amet lacus.
+        </p>
+        <p>時は21世紀、第3次核大戦とアジアが勝利した第4次非核大戦を経て、世界は「地球統一ブロック」となり、科学技術が飛躍的に高度化した日本が舞台。その中でマイクロマシン(Micromachine)技術（作中ではマイクロマシニングと表記されている）を使用して脳の神経ネットに素子（デバイス）を直接接続する電脳化技術や、義手・義足にロボット技術を付加した発展系であるサイボーグ（義体化）技術が発展、普及した。結果、多くの人間が電脳によってインターネットに直接アクセスできる時代が到来した。生身の人間、電脳化した人間、サイボーグ、アンドロイド、バイオロイドが混在する社会の中で、テロや暗殺、汚職などの犯罪を事前に察知してその被害を最小限に防ぐ内務省直属の攻性公安警察組織「公安9課」（通称「攻殻機動隊」）の活動を描いた物語。作中の年表は別項、攻殻機動隊シリーズの年表を参照。 </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pulvinar ultricies dictum. Morbi erat nisi, suscipit at viverra eget, rhoncus ac sapien.  Maecenas eleifend nulla quis consectetur sollicitudin. Mauris vitae faucibus magna. Mauris at maximus risus. Praesent consequat elementum elementum. Vestibulum sollicitudin ac dolor congue auctor. Fusce euismod ante nec ipsum efficitur, ac porta justo ultrices. Suspendisse sed iaculis metus, vitae tincidunt est.  Phasellus vulputate eros lacus, id dictum sem mollis in. Praesent massa urna, commodo a facilisis sed, ullamcorper sit amet lacus.</p>
+      </section>
+      <footer><p>[<a href="#top">Top</a>]</p></footer>
+    </article>
+
+    <article id="type__bold">
+      <header>
+        <h1>Sans-serif (Gothic) / Bold</h1>
+      </header>
+      <section class="t-SansSerif t-Bold">
+        <p>This is the sans-serif bold font.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pulvinar ultricies dictum. Morbi erat nisi, suscipit at viverra eget, rhoncus ac sapien.  Maecenas eleifend nulla quis consectetur sollicitudin. Mauris vitae faucibus magna. Mauris at maximus risus. Praesent consequat elementum elementum. Vestibulum sollicitudin ac dolor congue auctor. Fusce euismod ante nec ipsum efficitur, ac porta justo ultrices. Suspendisse sed iaculis metus, vitae tincidunt est.  Phasellus vulputate eros lacus, id dictum sem mollis in. Praesent massa urna, commodo a facilisis sed, ullamcorper sit amet lacus.
+        </p>
+        <p>時は21世紀、第3次核大戦とアジアが勝利した第4次非核大戦を経て、世界は「地球統一ブロック」となり、科学技術が飛躍的に高度化した日本が舞台。その中でマイクロマシン(Micromachine)技術（作中ではマイクロマシニングと表記されている）を使用して脳の神経ネットに素子（デバイス）を直接接続する電脳化技術や、義手・義足にロボット技術を付加した発展系であるサイボーグ（義体化）技術が発展、普及した。結果、多くの人間が電脳によってインターネットに直接アクセスできる時代が到来した。生身の人間、電脳化した人間、サイボーグ、アンドロイド、バイオロイドが混在する社会の中で、テロや暗殺、汚職などの犯罪を事前に察知してその被害を最小限に防ぐ内務省直属の攻性公安警察組織「公安9課」（通称「攻殻機動隊」）の活動を描いた物語。作中の年表は別項、攻殻機動隊シリーズの年表を参照。</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pulvinar ultricies dictum. Morbi erat nisi, suscipit at viverra eget, rhoncus ac sapien.  Maecenas eleifend nulla quis consectetur sollicitudin. Mauris vitae faucibus magna. Mauris at maximus risus. Praesent consequat elementum elementum. Vestibulum sollicitudin ac dolor congue auctor. Fusce euismod ante nec ipsum efficitur, ac porta justo ultrices. Suspendisse sed iaculis metus, vitae tincidunt est.  Phasellus vulputate eros lacus, id dictum sem mollis in. Praesent massa urna, commodo a facilisis sed, ullamcorper sit amet lacus.</p>
+      </section>
+      <footer><p>[<a href="#top">Top</a>]</p></footer>
+    </article>
+
+    <article id="type__italic">
+      <header>
+        <h1>Sans-serif (Gothic) / Italic</h1>
+      </header>
+      <section class="t-SansSerif t-Italic">
+        <p>This is the sans-serif italic font.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pulvinar ultricies dictum. Morbi erat nisi, suscipit at viverra eget, rhoncus ac sapien.  Maecenas eleifend nulla quis consectetur sollicitudin. Mauris vitae faucibus magna. Mauris at maximus risus. Praesent consequat elementum elementum. Vestibulum sollicitudin ac dolor congue auctor. Fusce euismod ante nec ipsum efficitur, ac porta justo ultrices. Suspendisse sed iaculis metus, vitae tincidunt est.  Phasellus vulputate eros lacus, id dictum sem mollis in. Praesent massa urna, commodo a facilisis sed, ullamcorper sit amet lacus.
+        </p>
+        <p>時は21世紀、第3次核大戦とアジアが勝利した第4次非核大戦を経て、世界は「地球統一ブロック」となり、科学技術が飛躍的に高度化した日本が舞台。その中でマイクロマシン(Micromachine)技術（作中ではマイクロマシニングと表記されている）を使用して脳の神経ネットに素子（デバイス）を直接接続する電脳化技術や、義手・義足にロボット技術を付加した発展系であるサイボーグ（義体化）技術が発展、普及した。結果、多くの人間が電脳によってインターネットに直接アクセスできる時代が到来した。生身の人間、電脳化した人間、サイボーグ、アンドロイド、バイオロイドが混在する社会の中で、テロや暗殺、汚職などの犯罪を事前に察知してその被害を最小限に防ぐ内務省直属の攻性公安警察組織「公安9課」（通称「攻殻機動隊」）の活動を描いた物語。作中の年表は別項、攻殻機動隊シリーズの年表を参照。</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pulvinar ultricies dictum. Morbi erat nisi, suscipit at viverra eget, rhoncus ac sapien.  Maecenas eleifend nulla quis consectetur sollicitudin. Mauris vitae faucibus magna. Mauris at maximus risus. Praesent consequat elementum elementum. Vestibulum sollicitudin ac dolor congue auctor. Fusce euismod ante nec ipsum efficitur, ac porta justo ultrices. Suspendisse sed iaculis metus, vitae tincidunt est.  Phasellus vulputate eros lacus, id dictum sem mollis in. Praesent massa urna, commodo a facilisis sed, ullamcorper sit amet lacus.</p>
+      </section>
+      <footer><p>[<a href="#top">Top</a>]</p></footer>
+    </article>
+
+    <article id="type__bolditalic">
+      <header>
+        <h1>Sans-serif (Gothic) / Bold Italic</h1>
+      </header>
+      <section class="t-SansSerif t-Bold t-Italic">
+        <p>This is the sans-serif bold italic font.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pulvinar ultricies dictum. Morbi erat nisi, suscipit at viverra eget, rhoncus ac sapien.  Maecenas eleifend nulla quis consectetur sollicitudin. Mauris vitae faucibus magna. Mauris at maximus risus. Praesent consequat elementum elementum. Vestibulum sollicitudin ac dolor congue auctor. Fusce euismod ante nec ipsum efficitur, ac porta justo ultrices. Suspendisse sed iaculis metus, vitae tincidunt est.  Phasellus vulputate eros lacus, id dictum sem mollis in. Praesent massa urna, commodo a facilisis sed, ullamcorper sit amet lacus.
+        </p>
+        <p>時は21世紀、第3次核大戦とアジアが勝利した第4次非核大戦を経て、世界は「地球統一ブロック」となり、科学技術が飛躍的に高度化した日本が舞台。その中でマイクロマシン(Micromachine)技術（作中ではマイクロマシニングと表記されている）を使用して脳の神経ネットに素子（デバイス）を直接接続する電脳化技術や、義手・義足にロボット技術を付加した発展系であるサイボーグ（義体化）技術が発展、普及した。結果、多くの人間が電脳によってインターネットに直接アクセスできる時代が到来した。生身の人間、電脳化した人間、サイボーグ、アンドロイド、バイオロイドが混在する社会の中で、テロや暗殺、汚職などの犯罪を事前に察知してその被害を最小限に防ぐ内務省直属の攻性公安警察組織「公安9課」（通称「攻殻機動隊」）の活動を描いた物語。作中の年表は別項、攻殻機動隊シリーズの年表を参照。</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pulvinar ultricies dictum. Morbi erat nisi, suscipit at viverra eget, rhoncus ac sapien.  Maecenas eleifend nulla quis consectetur sollicitudin. Mauris vitae faucibus magna. Mauris at maximus risus. Praesent consequat elementum elementum. Vestibulum sollicitudin ac dolor congue auctor. Fusce euismod ante nec ipsum efficitur, ac porta justo ultrices. Suspendisse sed iaculis metus, vitae tincidunt est.  Phasellus vulputate eros lacus, id dictum sem mollis in. Praesent massa urna, commodo a facilisis sed, ullamcorper sit amet lacus.</p>
+      </section>
+      <footer><p>[<a href="#top">Top</a>]</p></footer>
+    </article>
+  </section>
+</main>
+
+</body>
+</html>
