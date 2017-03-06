@@ -1,0 +1,13 @@
+# circle.yml
+
+machine:
+  node:
+    version: "stable"
+
+dependencies:
+  override:
+    - yarn install
+
+test:
+  override:
+    - yarn test

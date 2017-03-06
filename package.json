@@ -2,19 +2,31 @@
   "name": "system-font-i18n-css",
   "version": "0.1.0",
   "description": "A modern font stack for consistent multi-lingual typesetting",
+  "bugs": "https://github.com/mirai-audio/system-font-i18n-css/issues",
+  "homepage": "https://mirai-audio.github.io/system-font-i18n-css",
+  "repository": "mirai-audio/system-font-i18n-css",
+  "contributors": [
+    "0xADADA <github.com@0xadada.pub> (https://0xadada.pub)"
+  ],
+  "license": "MIT",
   "main": "system-font-i18n.css",
   "style": "system-font-i18n.css",
   "files": [
     "LICENSE.md",
     "system-font-i18n.css"
   ],
-  "devDependencies": {},
-  "scripts": {},
-  "repository": "mirai-audio/system-font-i18n-css",
-  "contributors": [
-    "0xADADA <github.com@0xadada.pub> (https://0xadada.pub)"
-  ],
-  "license": "MIT",
-  "bugs": "https://github.com/mirai-audio/system-font-i18n-css/issues",
-  "homepage": "https://mirai-audio.github.io/system-font-i18n-css"
+  "scripts": {
+    "test": "stylelint system-font-i18n.css"
+  },
+  "devDependencies": {
+    "stylelint": "^7.9.0",
+    "stylelint-config-standard": "^16.0.0"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "max-empty-lines": null,
+      "value-list-comma-newline-after": null
+    }
+  }
 }
