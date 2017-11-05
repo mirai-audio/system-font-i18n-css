@@ -1,7 +1,7 @@
 {
   "name": "system-font-i18n-css",
-  "version": "0.1.1",
-  "description": "A modern font stack for consistent multi-lingual typesetting",
+  "version": "1.0.0",
+  "description": "A modern system font stack for consistent multi-lingual typesetting across platforms",
   "bugs": "https://github.com/mirai-audio/system-font-i18n-css/issues",
   "homepage": "https://mirai-audio.github.io/system-font-i18n-css",
   "repository": "mirai-audio/system-font-i18n-css",
@@ -19,14 +19,15 @@
     "test": "stylelint system-font-i18n.css"
   },
   "devDependencies": {
-    "stylelint": "^7.9.0",
-    "stylelint-config-standard": "^16.0.0"
+    "stylelint": "^8.2.0",
+    "stylelint-config-standard": "^17.0.0"
   },
   "stylelint": {
     "extends": "stylelint-config-standard",
     "rules": {
       "max-empty-lines": null,
-      "value-list-comma-newline-after": null
+      "value-list-comma-newline-after": null,
+      "comment-empty-line-before": null
     }
   }
 }

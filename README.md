@@ -1,11 +1,13 @@
 # system-font-i18n-css
 
-> A modern native system font stack for consistent multi-lingual typesetting,
-  optimized by unicode ranges.
-
 [![CircleCI](https://img.shields.io/circleci/project/github/mirai-audio/system-font-i18n-css.svg?style=flat-square)](https://circleci.com/gh/mirai-audio/system-font-i18n-css)
+[![David](https://img.shields.io/david/dev/mirai-audio/system-font-i18n-css.svg?style=flat-square)](https://david-dm.org/mirai-audio/system-font-i18n-css?type=dev)
 [![npm](https://img.shields.io/npm/v/system-font-i18n-css.svg)](https://www.npmjs.com/package/system-font-i18n-css)
 [![npm](https://img.shields.io/npm/dm/system-font-i18n-css.svg)](https://www.npmjs.com/package/system-font-i18n-css)
+
+_A modern system font stack for consistent multi-lingual typesetting across
+platforms, optimized by unicode ranges._
+
 
 `system-font-i18n` provides twelve variations for the Sans-serif family of
 system font. This font stack provides more consistent character typesetting

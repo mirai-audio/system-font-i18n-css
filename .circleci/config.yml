@@ -1,0 +1,24 @@
+# circleci/config.yml
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:boron
+
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install dependencies
+          command: |
+            yarn
+      - save_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Run tests
+          command: |
+            yarn test
