@@ -1,6 +1,6 @@
 {
   "name": "system-font-i18n-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A modern system font stack for consistent multi-lingual typesetting across platforms",
   "bugs": "https://github.com/mirai-audio/system-font-i18n-css/issues",
   "homepage": "https://mirai-audio.github.io/system-font-i18n-css",
@@ -16,10 +16,10 @@
     "system-font-i18n.css"
   ],
   "scripts": {
-    "test": "stylelint system-font-i18n.css"
+    "test": "prettier system-font-i18n.css"
   },
   "devDependencies": {
-    "stylelint": "^8.2.0",
+    "prettier-stylelint": "^0.4.2",
     "stylelint-config-standard": "^18.0.0"
   },
   "stylelint": {
