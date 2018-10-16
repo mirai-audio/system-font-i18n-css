@@ -28,7 +28,6 @@ unicode range: english (latin-1) and more
   http://furbo.org/2015/07/09/i-left-my-system-fonts-in-san-francisco/
    */
   src:
-    local("system-ui"),  /* CSS Fonts Module Level 4, see: https://drafts.csswg.org/css-fonts-4/#system-ui-def */
     local("-apple-system"),  /* macOS */
     local("BlinkMacSystemFont"), /* macOS Chrome */
     local(".SFNSText-Light"), /* macOS Firefox El Capitan+ */
@@ -61,7 +60,6 @@ unicode range: english (latin-1) and a bit more
   font-style: italic;
   font-weight: 300;
   src:
-    local("system-ui"),  /* CSS Fonts Module Level 4 see: https://drafts.csswg.org/css-fonts-4/#system-ui-def */
     local("-apple-system"),  /* macOS */
     local("BlinkMacSystemFont"), /* macOS Chrome */
     local(".SFNSText-LightItalic"), /* macOS Firefox El Capitan+ */
@@ -92,7 +90,6 @@ unicode range: english (latin-1) and a bit more
   font-style: normal;
   font-weight: 400;
   src:
-    local("system-ui"),  /* CSS Fonts Module Level 4 see: https://drafts.csswg.org/css-fonts-4/#system-ui-def */
     local("-apple-system"),  /* macOS */
     local("BlinkMacSystemFont"), /* macOS Chrome */
     local(".SFNSText"), /* macOS Firefox El Capitan+ */
@@ -122,7 +119,6 @@ unicode range: english (latin-1) and a bit more
   font-style: italic;
   font-weight: 400;
   src:
-    local("system-ui"),  /* CSS Fonts Module Level 4 see: https://drafts.csswg.org/css-fonts-4/#system-ui-def */
     local("-apple-system"),  /* macOS */
     local("BlinkMacSystemFont"), /* macOS Chrome */
     local(".SFNSText-Italic"), /* macOS Firefox El Capitan+ */
@@ -153,7 +149,6 @@ unicode range: english (latin-1) and a bit more
   font-style: normal;
   font-weight: 700;
   src:
-    local("system-ui"),  /* CSS Fonts Module Level 4 see: https://drafts.csswg.org/css-fonts-4/#system-ui-def */
     local("-apple-system"),  /* macOS */
     local("BlinkMacSystemFont"), /* macOS Chrome */
     local(".SFNSText-Bold"), /* macOS Firefox El Capitan+ */
@@ -184,7 +179,6 @@ unicode range: english (latin-1) and a bit more
   font-style: italic;
   font-weight: 700;
   src:
-    local("system-ui"),  /* CSS Fonts Module Level 4 see: https://drafts.csswg.org/css-fonts-4/#system-ui-def */
     local("-apple-system"),  /* macOS */
     local("BlinkMacSystemFont"), /* macOS Chrome */
     local(".SFNSText-BoldItalic"), /* macOS Firefox El Capitan+ */
@@ -221,7 +215,6 @@ unicode range: CJK Symbols and Punctuation, Hiragana, Katakana, CJK Unified
   font-style: normal;
   font-weight: 300;
   src:
-    local("system-ui"),  /* CSS Fonts Module Level 4 see: https://drafts.csswg.org/css-fonts-4/#system-ui-def */
     local("HiraginoSans-W3"), local("Hiragino Sans W3"), /* macOS, iOS */
     local("Noto Sans CJK JP"), /* Chromebook, Android */
     local("Meiryo"); /* Windows */
@@ -246,7 +239,6 @@ unicode range: CJK Symbols and Punctuation, Hiragana, Katakana, CJK Unified
   font-style: italic;
   font-weight: 300;
   src:
-    local("system-ui"),  /* CSS Fonts Module Level 4 see: https://drafts.csswg.org/css-fonts-4/#system-ui-def */
     local("HiraginoSans-W3"), local("Hiragino Sans W3"), /* macOS, iOS */
     local("Noto Sans CJK JP"), /* Chromebook, Android */
     local("Meiryo"); /* Windows */
@@ -271,7 +263,6 @@ unicode range: CJK Symbols and Punctuation, Hiragana, Katakana, CJK Unified
   font-style: normal;
   font-weight: 400;
   src:
-    local("system-ui"),  /* CSS Fonts Module Level 4 see: https://drafts.csswg.org/css-fonts-4/#system-ui-def */
     local("HiraginoSans-W4"), local("Hiragino Sans W4"), /* macOS, iOS */
     local("Noto Sans CJK JP"), /* Chromebook, Android */
     local("Meiryo"); /* Windows */
@@ -296,7 +287,6 @@ unicode range: CJK Symbols and Punctuation, Hiragana, Katakana, CJK Unified
   font-style: italic;
   font-weight: 400;
   src:
-    local("system-ui"),  /* CSS Fonts Module Level 4 see: https://drafts.csswg.org/css-fonts-4/#system-ui-def */
     local("HiraginoSans-W4"), local("Hiragino Sans W4"), /* macOS, iOS */
     local("Noto Sans CJK JP"), /* Chromebook, Android */
     local("Meiryo"); /* Windows */
@@ -321,7 +311,6 @@ unicode range: CJK Symbols and Punctuation, Hiragana, Katakana, CJK Unified
   font-style: normal;
   font-weight: 700;
   src:
-    local("system-ui"),  /* CSS Fonts Module Level 4 see: https://drafts.csswg.org/css-fonts-4/#system-ui-def */
     local("HiraginoSans-W7"), local("Hiragino Sans W7"), /* macOS, iOS */
     local("Noto Sans CJK JP"), /* Chromebook, Android */
     local("Meiryo"); /* Windows */
@@ -346,7 +335,6 @@ unicode range: CJK Symbols and Punctuation, Hiragana, Katakana, CJK Unified
   font-style: italic;
   font-weight: 700;
   src:
-    local("system-ui"),  /* CSS Fonts Module Level 4 */
     local("HiraginoSans-W7"), local("Hiragino Sans W7"), /* macOS, iOS */
     local("Noto Sans CJK JP"), /* Chromebook, Android */
     local("Meiryo"); /* Windows */
