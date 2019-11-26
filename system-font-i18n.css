@@ -1,6 +1,6 @@
 /*!
 @author @0xadada
-@url https://0xadada.pub
+@url https://mirai.audio/system-font-i18n-css
 @license MIT
 */
 
@@ -107,6 +107,7 @@ unicode range: english (latin-1) and a bit more
     U+2200-22FF; /* Mathmatical operators */
 }
 
+
 /* system-sans-serif
 
 style:         sans-serif
@@ -178,6 +179,66 @@ unicode range: english (latin-1) and a bit more
   font-family: system-sans-serif;
   font-style: italic;
   font-weight: 700;
+  src:
+    local("-apple-system"),  /* macOS */
+    local("BlinkMacSystemFont"), /* macOS Chrome */
+    local(".SFNSText-BoldItalic"), /* macOS Firefox El Capitan+ */
+    local(".HelveticaNeueDeskInterface-BoldItalic"), /* macOS Yosemite */
+    local(".LucidaGrandeUI"), /* macOS Kodiak-Mavericks */
+    local("Noto Sans"), local("Roboto"), /* Linux, Chromebook, Android */
+    local("Oxygen-Sans"), local("Ubuntu"), local("Cantarell"), /* KDE, Ubuntu, Gnome */
+    local("Segoe UI"), local("Arial"); /* Window Phone, Windows Vista+ */
+  unicode-range:
+    U+0020-00FF, /* Basic-latin - Latin-1 Supplement */
+    U+2000-206F, /* General Punctuation */
+    U+2070-209F, /* Superscripts & subscripts */
+    U+2150-218F, /* Number forms */
+    U+2190-21FF, /* Arrows */
+    U+2200-22FF; /* Mathmatical operators */
+}
+
+
+/* system-sans-serif
+
+style:         sans-serif
+variant:       normal (Regular)
+weight:        900 (Heavy)
+unicode range: english (latin-1) and a bit more
+ */
+@font-face {
+  font-family: system-sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  src:
+    local("-apple-system"),  /* macOS */
+    local("BlinkMacSystemFont"), /* macOS Chrome */
+    local(".SFNSText-Bold"), /* macOS Firefox El Capitan+ */
+    local(".HelveticaNeueDeskInterface-Bold"), /* macOS Yosemite */
+    local(".LucidaGrandeUI"), /* macOS Kodiak-Mavericks */
+    local("Noto Sans"), local("Roboto"), /* Linux, Chromebook, Android */
+    local("Oxygen-Sans"), local("Ubuntu"), local("Cantarell"), /* KDE, Ubuntu, Gnome */
+    local("Segoe UI"), local("Arial"); /* Window Phone, Windows Vista+ */
+  unicode-range:
+    U+0020-00FF, /* Basic-latin - Latin-1 Supplement */
+    U+2000-206F, /* General Punctuation */
+    U+2070-209F, /* Superscripts & subscripts */
+    U+2150-218F, /* Number forms */
+    U+2190-21FF, /* Arrows */
+    U+2200-22FF; /* Mathmatical operators */
+}
+
+
+/* system-sans-serif
+
+style:         sans-serif
+variant:       Italic
+weight:        900 (Heavy)
+unicode range: english (latin-1) and a bit more
+ */
+@font-face {
+  font-family: system-sans-serif;
+  font-style: italic;
+  font-weight: 900;
   src:
     local("-apple-system"),  /* macOS */
     local("BlinkMacSystemFont"), /* macOS Chrome */
@@ -327,6 +388,54 @@ unicode range: CJK Symbols and Punctuation, Hiragana, Katakana, CJK Unified
 style:         sans-serif (Gothic)
 variant:       italic
 weight:        700 (Bold)
+unicode range: CJK Symbols and Punctuation, Hiragana, Katakana, CJK Unified
+               ideographs.
+ */
+@font-face {
+  font-family: system-gothic;
+  font-style: italic;
+  font-weight: 700;
+  src:
+    local("HiraginoSans-W7"), local("Hiragino Sans W7"), /* macOS, iOS */
+    local("Noto Sans CJK JP"), /* Chromebook, Android */
+    local("Meiryo"); /* Windows */
+  unicode-range:
+    U+3000-303F, /* CJK Symbols and Punctuation */
+    U+3040-309F, /* Hiragana */
+    U+30A0-30FF, /* Katakana */
+    U+4E00-9FFF; /* CJK Unified ideographs */
+}
+
+
+/* system-gothic
+
+style:         sans-serif (Gothic)
+variant:       normal (Regular)
+weight:        900 (Heavy)
+unicode range: CJK Symbols and Punctuation, Hiragana, Katakana, CJK Unified
+               ideographs.
+ */
+@font-face {
+  font-family: system-gothic;
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local("HiraginoSans-W7"), local("Hiragino Sans W7"), /* macOS, iOS */
+    local("Noto Sans CJK JP"), /* Chromebook, Android */
+    local("Meiryo"); /* Windows */
+  unicode-range:
+    U+3000-303F, /* CJK Symbols and Punctuation */
+    U+3040-309F, /* Hiragana */
+    U+30A0-30FF, /* Katakana */
+    U+4E00-9FFF; /* CJK Unified ideographs */
+}
+
+
+/* system-gothic
+
+style:         sans-serif (Gothic)
+variant:       italic
+weight:        900 (Heavy)
 unicode range: CJK Symbols and Punctuation, Hiragana, Katakana, CJK Unified
                ideographs.
  */
