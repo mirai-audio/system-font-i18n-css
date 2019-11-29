@@ -155,7 +155,7 @@ unicode range: english (latin-1) and a bit more
     local(".SFNSText-Bold"), /* macOS Firefox El Capitan+ */
     local(".HelveticaNeueDeskInterface-Bold"), /* macOS Yosemite */
     local(".LucidaGrandeUI"), /* macOS Kodiak-Mavericks */
-    local("Noto Sans"), local("Roboto"), /* Linux, Chromebook, Android */
+    local("Noto Sans"), local("Roboto Bold"), local("Roboto"), /* Linux, Chromebook, Android */
     local("Oxygen-Sans"), local("Ubuntu"), local("Cantarell"), /* KDE, Ubuntu, Gnome */
     local("Segoe UI"), local("Arial"); /* Window Phone, Windows Vista+ */
   unicode-range:
@@ -185,7 +185,7 @@ unicode range: english (latin-1) and a bit more
     local(".SFNSText-BoldItalic"), /* macOS Firefox El Capitan+ */
     local(".HelveticaNeueDeskInterface-BoldItalic"), /* macOS Yosemite */
     local(".LucidaGrandeUI"), /* macOS Kodiak-Mavericks */
-    local("Noto Sans"), local("Roboto"), /* Linux, Chromebook, Android */
+    local("Noto Sans"), local("Roboto BoldItalic"), local("Roboto"), /* Linux, Chromebook, Android */
     local("Oxygen-Sans"), local("Ubuntu"), local("Cantarell"), /* KDE, Ubuntu, Gnome */
     local("Segoe UI"), local("Arial"); /* Window Phone, Windows Vista+ */
   unicode-range:
@@ -215,7 +215,7 @@ unicode range: english (latin-1) and a bit more
     local(".SFNSText-Bold"), /* macOS Firefox El Capitan+ */
     local(".HelveticaNeueDeskInterface-Bold"), /* macOS Yosemite */
     local(".LucidaGrandeUI"), /* macOS Kodiak-Mavericks */
-    local("Noto Sans"), local("Roboto"), /* Linux, Chromebook, Android */
+    local("Roboto Black"), /* Linux, Chromebook, Android */
     local("Oxygen-Sans"), local("Ubuntu"), local("Cantarell"), /* KDE, Ubuntu, Gnome */
     local("Segoe UI"), local("Arial"); /* Window Phone, Windows Vista+ */
   unicode-range:
@@ -245,7 +245,7 @@ unicode range: english (latin-1) and a bit more
     local(".SFNSText-BoldItalic"), /* macOS Firefox El Capitan+ */
     local(".HelveticaNeueDeskInterface-BoldItalic"), /* macOS Yosemite */
     local(".LucidaGrandeUI"), /* macOS Kodiak-Mavericks */
-    local("Noto Sans"), local("Roboto"), /* Linux, Chromebook, Android */
+    local("Roboto BlackItalic"), local("Roboto"), /* Linux, Chromebook, Android */
     local("Oxygen-Sans"), local("Ubuntu"), local("Cantarell"), /* KDE, Ubuntu, Gnome */
     local("Segoe UI"), local("Arial"); /* Window Phone, Windows Vista+ */
   unicode-range:
