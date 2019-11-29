@@ -1,16 +1,20 @@
 {
   "name": "system-font-i18n-css",
   "version": "2.0.1",
-  "description":
-    "A modern system font stack for consistent multi-lingual typesetting across platforms",
+  "description": "A modern system font stack for consistent multi-lingual typesetting across platforms",
   "bugs": "https://github.com/mirai-audio/system-font-i18n-css/issues",
   "homepage": "https://mirai-audio.github.io/system-font-i18n-css",
   "repository": "mirai-audio/system-font-i18n-css",
-  "contributors": ["0xADADA <github.com@0xadada.pub> (https://0xadada.pub)"],
+  "contributors": [
+    "0xADADA <github.com@0xadada.pub> (https://0xadada.pub)"
+  ],
   "license": "MIT",
   "main": "system-font-i18n.css",
   "style": "system-font-i18n.css",
-  "files": ["LICENSE.md", "system-font-i18n.css"],
+  "files": [
+    "LICENSE.md",
+    "system-font-i18n.css"
+  ],
   "scripts": {
     "test": "prettier system-font-i18n.css"
   },
