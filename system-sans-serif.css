@@ -1,0 +1,64 @@
+/*!
+@author @0xadada
+@url https://mirai.audio/system-font-i18n-css
+@license MIT
+*/
+
+/* system-sans-serif
+
+A sans-serif style does not have extending adornments attached to the end of
+the letterform.
+============================================================================= */
+.system-sans-serif,
+.system-sans-serif button,
+.system-sans-serif input,
+.system-sans-serif select {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* font-smooth: always; */
+
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+  text-rendering: optimizeLegibility /* improved font rendering algorithm    */;
+
+  font-family: '-apple-system'
+      /* Generic system font helper on OS X, macOS, iOS
+       * works on non-Chrome browsers, selects the following:
+       * ".SFNS" / San Francisco on Catalina
+       * ".SFNSText" / San Francisco from El Capitan to Mojave
+       * ".HelveticaNeueDeskInterface" on OS X Yosemite
+       * ".LucidaGrandeUI" on OS X Kodiak...Mavericks                        */,
+    'BlinkMacSystemFont'
+      /* Generic system font helper for Google Chrome
+       * San Francisco, Helvetica Neue, Lucida Grande
+       * depending on the OS X / macOS / iOS version                         */,
+    'HiraginoSans' /* CJK typeface on OS X, macOS and iOS. Postscript name   */,
+    'Hiragino Sans' /* see above                                             */,
+    'Roboto' /* supports more variants and weights on Chrome OS, Android     */,
+    'Noto Sans' /* the most complete Unicode coverage, Chrome OS and Android */,
+    'Noto Sans CJK JP' /* CJK typeface on Chrome OS, Android                 */,
+    'Oxygen-Sans' /* KDE                                                     */,
+    'Ubuntu' /* Ubuntu                                                       */,
+    'Cantarell' /* Gnome                                                     */,
+    'Segoe UI' /* Windows                                                    */,
+    'Meiryo' /* CJK typeface on Windows                                      */,
+    'Arial' /* Window XP, Windows Phone, Windows Vista+                      */,
+    sans-serif /* generic fallback                                           */,
+    'Apple Color Emoji' /* OS X, macOS, iOS Emoji                            */,
+    'Noto Color Emoji' /* Android, Chrome OS Emoji                           */,
+    'Symbola' /* Linux, open source Emoji                                    */,
+    'Segoe UI Emoji', 'Segoe UI Symbol' /* Windows Emoji                     */;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .system-sans-serif,
+  .system-sans-serif button,
+  .system-sans-serif input,
+  .system-sans-serif select {
+    /* Enable subpixel antialiasing on Retina & Hi-DPI screens */
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}
+

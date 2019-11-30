@@ -6,16 +6,15 @@
 [![npm](https://img.shields.io/npm/v/system-font-i18n-css.svg)](https://www.npmjs.com/package/system-font-i18n-css)
 [![npm](https://img.shields.io/npm/dm/system-font-i18n-css.svg)](https://www.npmjs.com/package/system-font-i18n-css)
 
-_A modern system font stack for consistent multi-lingual typesetting across
-platforms, optimized by unicode ranges._
+_A beautiful modern native system font stack for rendering multilingual text,
+consistent across all major desktop and mobile operating systems and browsers._
 
+`system-font-i18n` Provides 5 weights (Thin, Light, Regular, Bold, Heavy) and 
+supports Italic variants for each weight. This font stack provides more
+consistent per-character typesetting across western and asian languages on all
+major modern desktop and mobile operating systems and browsers.
 
-`system-font-i18n` provides twelve variations for the Sans-serif family of
-system font. This font stack provides more consistent character typesetting
-across multiple languages and all modern operating systems.
-
-`system-font-i18n` is optimized to select the best system font on a
-per-character basis, based on the unicode range of that character.
+View the docs for type specimens and example text.
 
 ## [Docs](https://mirai-audio.github.io/system-font-i18n-css/)
 
@@ -27,7 +26,7 @@ per-character basis, based on the unicode range of that character.
 
 ### General
 
-The robust and preferred method is to reference the `system-font-i18n.css`
+The robust and preferred method is to reference the `system-sans-serif.css`
 stylesheet in the `<head>` of the `html` document.  Then add the utility
 helper class to the `body` `class`.
 
@@ -37,9 +36,9 @@ helper class to the `body` `class`.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="system-font-i18n.css">
+  <link rel="stylesheet" href="system-sans-serif.css">
 </head>
-<body class="system-font-i18n-sans">
+<body class="system-sans-serif">
   <p>this is now using the system font!</p>
 </body>
 ```
@@ -75,11 +74,11 @@ Import the CSS into your Ember project.
 /* … other imports */
 ```
 
-Add the `system-font-i18n-sans` CSS classname to the element to be styled, e.g.:
+Add the `system-sans-serif` CSS classname to the element to be styled, e.g.:
 
 ```html
 <!--- HTML head -->
-<body class="system-font-i18n-sans">
+<body class="system-sans-serif">
 <!-- body -->
 ```
 

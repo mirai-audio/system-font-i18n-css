@@ -9,14 +9,14 @@
     "0xADADA <github.com@0xadada.pub> (https://0xadada.pub)"
   ],
   "license": "MIT",
-  "main": "system-font-i18n.css",
-  "style": "system-font-i18n.css",
+  "main": "system-sans-serif.css",
+  "style": "system-sans-serif.css",
   "files": [
     "LICENSE.md",
-    "system-font-i18n.css"
+    "system-sans-serif.css"
   ],
   "scripts": {
-    "test": "yarn prettier system-font-i18n.css"
+    "test": "yarn prettier system-sans-serif.css"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
