@@ -14,6 +14,7 @@ supports Italic variants for each weight. This font stack provides more
 consistent per-character typesetting across western and asian languages on all
 major modern desktop and mobile operating systems and browsers.
 
+
 View the docs for type specimens and example text.
 
 ## [Docs](https://mirai-audio.github.io/system-font-i18n-css/)
@@ -22,7 +23,7 @@ View the docs for type specimens and example text.
 * [CODE_OF_CONDUCT](https://github.com/mirai-audio/mir/wiki/CODE_OF_CONDUCT)
 * [CONTRIBUTING](.github/CONTRIBUTING.md)
 
-## Installation
+## Usage
 
 ### General
 
