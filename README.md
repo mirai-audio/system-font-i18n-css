@@ -14,6 +14,9 @@ supports Italic variants for each weight. This font stack provides more
 consistent per-character typesetting across western and asian languages on all
 major modern desktop and mobile operating systems and browsers.
 
+### Preview
+
+<img src="preview.png" alt="Typography preview">
 
 View the docs for type specimens and example text.
 
