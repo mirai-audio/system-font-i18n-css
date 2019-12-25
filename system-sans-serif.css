@@ -13,10 +13,6 @@ the letterform.
 .system-sans-serif button,
 .system-sans-serif input,
 .system-sans-serif select {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* font-smooth: always; */
-
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
@@ -51,14 +47,3 @@ the letterform.
     'Symbola' /* Linux, open source Emoji                                    */,
     'Segoe UI Emoji', 'Segoe UI Symbol' /* Windows Emoji                     */;
 }
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .system-sans-serif,
-  .system-sans-serif button,
-  .system-sans-serif input,
-  .system-sans-serif select {
-    /* Enable subpixel antialiasing on Retina & Hi-DPI screens */
-    -webkit-font-smoothing: subpixel-antialiased;
-  }
-}
-
